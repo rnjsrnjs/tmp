@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>연습문제 8-9</title>
+  <script>
+    function addStep() {
+      let ui = prompt("다음 단계 입력해");
+      let li = document.createElement('li');
+      li.innerHTML = ui;
+      let ol = document.getElementById('ol');
+      ol.appendChild(li);
+    }
+  </script>
+</head>
+<body>
+  <h3>라면 끓이는 순서</h3>
+  <hr>
+  <ol id='ol' type='A' style="background-color: yellowgreen;" onclick="addStep();">
+    <li>물을 끓인다.</li>
+  </ol>
+</body>
+</html
