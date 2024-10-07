@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function doCalc(e){
+            if(e.key == "Enter"){
+                let exp = document.getElementById('exp');
+                let res = document.getElementById('res');
+                res.value =eval(exp.)
+
+            }
+        }
+</head>
+<body>
+    <h3>계산기 만들기</h3>
+    <hr>
+    수식을 입력하고 &lt;Enter&gt를 입력하시오.
+    <br>
+    식 <input type="text"id="exp" onkeydown="doCalc(event);"><br>
+    값 <input type="text"id="res" >
+    <input type = "button"value=" 계산 " onclick="calculate()">
+</body>
+</html>
