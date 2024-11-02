@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세션 스토리지에 구입 리스트 저장</title>
+</head>
+<body>
+    <h1>세션 스토리지에 구입 리스트 저장</h1>
+    <hr>
+    품목명 : <input type="text" id="item">
+    개수 : <input type="text" id="count">
+    <br>
+    <input type="button" value="저장" onclick="store()">
+    
+    <script>
+        function store() {
+            let item = document.getElementById("item").value;
+            let count = document.getElementById("count").value;
+            
+            // 유효성 검사
+            if (item.trim() === "" || count.trim() === "") {
+                alert("품목명과 개수를 입력하세요.");
+                return;
+            }
+
+            // 세션 스토리지에 저장
+            sessionStorage.setItem(item, count);
+            alert("저장되었습니다.");
+
+            // 입력 필드 초기화
+            document.getElementById("item").value = "";
+            document.getElementById("count").value = "";
+        }
+    </script>
+</body>
+</html>
