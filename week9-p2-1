@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기 쓰기</title>
+</head>
+<body>
+    <h1>일기 쓰기</h1>
+    <hr>
+    
+    <script>
+        let date = new Date();
+        document.write("오늘 " + date.getFullYear() + "년 " + (date.getMonth() + 1) + "월 " + date.getDate() + "일" + "<br>");
+    </script>
+    <textarea id="contents" rows="4" cols="50" placeholder="오늘의 일기를 작성하세요"></textarea>
+    <br>
+
+    <button onclick="save()">저장</button>
+    <button onclick="newPage()">보기</button>
+
+    <script>
+        let ilgi = document.getElementById("contents");
+        let key = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
+
+        function save() {
+            sessionStorage.setItem(key, ilgi.value);
+            alert("일기가 저장되었습니다.");
+        }
+
+        function newPage() {
+            window.open("week9-p2-2.html", "_blank");
+        }
+    </script>
+</body>
+</html>
