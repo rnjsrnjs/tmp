@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일기 보기</title>
+</head>
+<body>
+    <h1>일기 보기</h1>
+    <hr>
+
+    <div id="diaryList"></div>
+
+    <script>
+        function loadDiary() {
+            let diaryList = document.getElementById("diaryList");
+            diaryList.innerHTML = ""; 
+            
+            for (let i = 0; i < sessionStorage.length; i++) {
+                let key = sessionStorage.key(i);
+                let value = sessionStorage.getItem(key);
+
+                let entry = document.createElement("div");
+                let dateElement = document.createElement("p");
+                let contentElement = document.createElement("p");
+              
+                dateElement.innerHTML = `<strong>${i + 1}</strong> ${key}`;
+                contentElement.textContent = value;
+             
+                entry.style.borderTop = "1px solid #000";
+                entry.style.padding = "10px";
+                
+                entry.appendChild(dateElement);
+                entry.appendChild(contentElement);
+                
+                diaryList.insertBefore(entry, diaryList.firstChild);
+            }
+        }
+
+        loadDiary();
+    </script>
+</body>
+</html>
