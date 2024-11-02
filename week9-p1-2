@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>세션 스토리지에서 구입 리스트 검색</title>
+</head>
+<body>
+    <h1>세션 스토리지에서 구입 리스트 검색</h1>
+    <hr>
+    품목명 : <input type="text" id="searchItem">
+    개수 : <input type="text" id="searchCount">
+    <input type="button" value="검색" onclick="search()">
+    <br><br>
+    <div id="result"></div>
+
+    <script>
+        function search() {
+            let searchItem = document.getElementById("searchItem").value;
+            let storedCount = sessionStorage.getItem(searchItem);
+            let searchCount = document.getElementById("searchCount").value;
+
+            if (storedCount !== null) {
+                if (storedCount === searchCount) {
+                    document.getElementById("result").innerHTML = `품목명: ${searchItem}, 저장된 개수: ${storedCount}, 입력한 개수와 일치합니다.`;
+                } else {
+                    document.getElementById("result").innerHTML = `품목명: ${searchItem}, 저장된 개수: ${storedCount}, 입력한 개수와 일치하지 않습니다.`;
+                }
+            } else {
+                document.getElementById("result").innerHTML = "해당 품목이 없습니다.";
+            }
+        }
+    </script>
+</body>
+</html>
