@@ -27,7 +27,7 @@ const itemTotals = cart.map(goods =>({
     item: goods.item,total:goods.price*goods.quantity
 }));
 
-console.log(`total price`=, itemTotals);
+console.log(`total price`= itemTotals);
 
 function a(){
     return{name:'kms',aff:'hansung'};
