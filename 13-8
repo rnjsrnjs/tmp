@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h3>워크 태스크 만들기</h3>
+    <hr>
+    <div>1에서 10까지의 합은<span id="sum"></span></div>
+    <script>
+        var addworker = new Worker("add1to10.js");
+        addworker.onmessage =function(e){
+            document.getElementById("sum").innerHTML = e.data;
+        }
+    </script>
+</body>
+</html>
