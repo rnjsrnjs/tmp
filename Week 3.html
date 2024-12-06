@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>WEEK 3</title>
+        <style>
+            section {
+                padding: 10px 10px;
+            }
+            #menubar {
+                background-color: skyblue;
+            }
+            #menubar ul {
+                padding: 0;
+                width: 300px;
+            }
+            #menubar li {
+                list-style: none;
+                display: inline-block;    /* 한 줄에 아이템 보여주기 */
+                padding: 5px 10px;
+            }
+            #menubar a {
+                color: white;
+                text-decoration: none;      /* 밑줄 없애기 */
+            }
+            #menubar a:hover {
+                color: blue;    /* 마우스 올릴 때 글자 색 변화 */
+            }
+            table {
+                border-collapse: collapse;
+            }
+            th {
+                background-color: azure;
+                height: 30px;
+            }
+            .week {
+                width: 100px;
+            }
+            .date {
+                width: 100px;
+            }
+            .contents {
+                width: 300px;
+            }
+            td {
+                padding: 7px;      /* cell 내부 데이터 간격 */
+                text-align: center;
+            }
+            tr:hover {
+                background-color:beige;
+            }
+            .square {
+                width: 100px;
+                height: 100px;
+                background-color: blanchedalmond;
+                margin-top: 20px;
+                padding: 10px;
+                border-width: 1px;          /* border: 1px solid blue; */
+                border-style: solid;
+                border-color: blue;
+                
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Web Programming</h1>
+        </header>
+        <nav id="menubar">
+            <ul>
+                <li><a href="#week1">Week 1</a></li>
+                <li><a href="#week2">Week 2</a></li>
+                <li><a href="#week3">Week 3</a></li>
+                <li><a href="#week4">Week 4</a></li>
+            </ul>
+        </nav>
+        <hr>
+        <hr>
+        
+        <main>
+            <section> 
+                <strong>웹에 관하여</strong><br><br>
+                <details>웹의 기본 목적은 한 컴퓨터에서 만든 문서를 다른 컴퓨터에서 쉽게 볼 수 있게 하는 것이다.
+                    <summary>
+                        웹의 기본 목적
+                    </summary>
+                </details>
+                <details>전 세계의 컴퓨터들을 인터넷으로 연결한 시스템을 WWW, 즉 웹이라고 부른다.
+                    <summary>
+                        왜 Why?
+                    </summary>
+                </details>
+            </section>
+            <section>
+                <table border="1">
+                    <caption style="padding: 15px; font-size:large;"><strong>Weekly Schedule</strong></caption>
+                    <thead><th class="week">Week</th><th class="date">Date</th><th class="contents">Contents</th></thead>
+                    <tbody>
+                        <tr>
+                            <td class="week">1</td>
+                            <td class="date">Sept. 2</td>
+                            <td class="contents">
+                                <ul>
+                                    <li>강의개요</li>
+                                    <li>웹의 개념과 구조</li>
+                                    <li>Visual Studio Code</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="week">2</td>
+                            <td class="date">Sept. 9</td>
+                            <td class="contents">HTML Review</td>
+                        </tr>
+                        <tr>
+                            <td class="week">3</td>
+                            <td class="date">Sept. 16</td>
+                            <td class="contents">CSS Review</td>
+                        </tr>
+                        <tr>
+                            <td class="week">4</td>
+                            <td class="date">Sept. 23</td>
+                            <td class="contents">JavaScript</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <hr>
+            <ol>
+                <section id="week1">
+                    <li><strong>Week 1</strong></li>
+                    <ul>
+                        <li><a href="../Syllabus.pdf">강의 개요</a></li>
+                        <li><a href="../W1/웹의개념과구조.pdf">웹의 개념과 구조</a></li>
+                        <li><a href="../W1/VisualStudioCode.pdf">Visual Studio Code</a></li>
+                        <ol>
+                            <li>설치</li>
+                            <li>유용한 plug-ins</li>
+                                <ul>
+                                    <li>Material Theme</li>
+                                    <li>Prettier</li>
+                                    <li>indent-rainbow</li>
+                                    <li>Auto Rename Tag</li>
+                                    <li>HTML CSS Support</li>
+                                    <li>Live Server</li>
+                                </ul>
+                            </li>
+                            <li>EMMET</li>
+                        </ol>
+                    </ul>
+                </section>
+                <hr>
+                <section id="week2">
+                    <li><strong>Week 2: <a href="../W2/HTML-Review.pdf">HTML Review</a></strong></li><br>
+                    <section><strong>Input Types</strong>
+                        <p><u>Check Box</u></p>
+                        <label><input type="checkbox">HTML5</label>
+                        <label><input type="checkbox">CSS3</label>
+                        <label><input type="checkbox">JavaScript</label>
+                        <br>
+                        <p><u>Radio Button</u></p>
+                        <label><input type="radio" name="week">HTML5</label><br>
+                        <label><input type="radio" name="week">CSS3</label><br>
+                        <label><input type="radio" name="week">JavaScript</label><br>
+                        <p><u>Combo Box</u></p>
+                        <select name="this_week">
+                            <option value="1">HTML5</option>
+                            <option value="2">CSS3</option>
+                            <option value="3">JavaScript</option>
+                        </select>
+                    </section>
+                </section>
+                <hr>
+                <section id="week3">
+                    <li><strong>Week 3: <a href="../W3/CSS-Review.pdf">CSS3 Review</a></strong></li><br>
+                    <ul>
+                        <li>Selectors: *, tag, #id, .class, 가상클래스, attribute</li>
+                        <li>Properties: background-color, background, color, border-color, font-size, text-align, text-decoration, font-family, ...</li>
+                        <li>Box Model
+                            <ul>
+                                <li>block 요소, inline 요소</li>
+                                <li>margin, padding, border, height, width</li>
+                            </ul>
+                        </li>
+                        <li>display: block, inline, inline-block</li>
+                        <li>position: absolute, relative, fixed, float</li>
+                    </ul>
+                    <div class="square"></div>
+                </section>
+                <hr>
+                <section id="week4">
+                    <li><strong>Week 4: </strong></li><br>
+                </section>
+            </ol>
+        </main>
+        <br><hr>
+        <footer>
+            Copyright &copy 2024 by Sung-Dong All Rights Reserved
+        </footer>
+    </body>
+</html>
