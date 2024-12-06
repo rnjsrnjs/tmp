@@ -25,7 +25,7 @@ Web Programming 실습 코드 모음
    - 9-3.html: 실습문제 9-3 (Enter 키가 입력되었을 때 수식의 값을 계산하기)
  
 7. Week 7 연습
-    - 10-5.html: 실습문제 10-5와 10-6을 포함 (SetTimeout, SetInterval 이용 시계 보이기)
+    - 10-5.html: 실습문제 10-5와 10-6을 포함 (SetTimeout, clearTimeout을 이용하여 시계 구현/setInterval, clearInterval을 이용하여 시계 구현)
       
 8. Week 9 연습
     - week 9-p1-1,2/week 9-p2-1,2 : 실습문제2개(2개의 일기쓰기 웹페이지 만들기, 구입리스트 저장 및 검색하기 )
