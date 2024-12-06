@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>곱셈하기</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+        }
+        input, button {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type=number] {
+            -moz-appearance: textfield;
+            appearance: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>곱셈하기</h1>
+    <form id="multiplication-form">
+        <input type="number" id="number1" placeholder="첫 번째 숫자" required>
+        ×
+        <input type="number" id="number2" placeholder="두 번째 숫자" required>
+        =
+        <input type="text" id="result" readonly>
+        <br>
+        <button type="button" id="calculate">곱하기</button>
+    </form>
+
+    <script>
+        const workerCode = `
+            self.onmessage = function(event) {
+                const { num1, num2 } = event.data;
+                self.postMessage(num1 * num2);
+            };
+        `;
+
+        const blob = new Blob([workerCode], { type: "application/javascript" });
+        const worker = new Worker(URL.createObjectURL(blob));
+
+        const num1Input = document.getElementById("number1");
+        const num2Input = document.getElementById("number2");
+        const resultInput = document.getElementById("result");
+        const calculateButton = document.getElementById("calculate");
+
+        calculateButton.addEventListener("click", () => {
+            const num1 = parseFloat(num1Input.value);
+            const num2 = parseFloat(num2Input.value);
+
+            if (isNaN(num1) || isNaN(num2)) {
+                alert("유효한 숫자를 입력하세요.");
+                return;
+            }
+
+    
+            worker.postMessage({ num1, num2 });
+        });
+
+        worker.onmessage = function(event) {
+            resultInput.value = event.data;
+        };
+    </script>
+</body>
+</html>
