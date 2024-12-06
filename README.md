@@ -6,7 +6,7 @@ Web Programming 실습 코드 모음
 2. week2.html
    - 2주차 연습
    - 표, 링크, 시맨틱 태그 등 추가
-   - 2주차 공부 내용 정리 추가
+   - 실습문제 week2-1,week2-2 작성
 3. week3.html
    - 3주차 연습
    - CSS3 style 공부
