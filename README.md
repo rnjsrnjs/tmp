@@ -12,7 +12,8 @@ Web Programming 실습 코드 모음
    - CSS3 style 공부
    - 실습문제 week3-1,2,3 작성
 
-4. Object-gen.html
+4. Week 4 연습
+   - Object-gen.html
    - 객체 생성 3가지 방법 연습
 
 5. Week 5 연습
