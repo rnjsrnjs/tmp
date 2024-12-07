@@ -47,11 +47,10 @@ Web Programming 실습 코드 모음
      - reduce.js : for문 대신에 reduce를 이용하여 원소를 1개로 만들어 평균값을 구함.
     
 12. Week 13
-     -  
-     -
-     -
+     - event.js ,event2.js 이벤트 기반으로 처리하는 작업을 연습.
+     - non - block1 ,non - block2.js 방식으로 동작하는 함수 연습.
+     - simp - webs1 ,simp - webs2.js 간단한 웹 서버 생성 연습.
+     - fs1,fs2.js 비동기식 입출력과 동기식 입출력의 함수의 차이점을 알아내는 연습.
 
 13. Week 14
-     -
-     -
-     -   
+      - app1에서 부터 6까지 작성 : 디렉토리를 따로 만들어서 express.js란 웹 프레임워크를 공부.
