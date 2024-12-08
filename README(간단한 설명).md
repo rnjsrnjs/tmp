@@ -45,6 +45,7 @@ Web Programming 실습 코드 모음
      - curring.js : 커링함수를 이용하여 함수를 하나 일만 하도록 작성.
      - map.js : array에 있는 원소들을 하나씩 action을 실행하고 push함.
      - reduce.js : for문 대신에 reduce를 이용하여 원소를 1개로 만들어 평균값을 구함.
+     - aveScore.js 강의에서 배운 map(),filter(),reduce()함수들을 이용하여 코드 연습.
     
 12. Week 13
      - event.js ,event2.js 이벤트 기반으로 처리하는 작업을 연습.
